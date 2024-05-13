@@ -1,0 +1,161 @@
+@import url("./assets/style/header.css");
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Medium.woff2') format('woff2'),
+        url('./assets/fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --dark: #1F2A3E;
+    --roseBege: #DDA06B;
+    --orange: #DE4700;
+    --lightBege: #FFF2DE;
+    --white: #FFFFFF;
+}
+
+html,
+body,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+span,
+form,
+input,
+select,
+button {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    font: inherit;
+}
+
+html,
+body,
+#root {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.h1 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 150%;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+
+}
+
+.h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+
+}
+
+.p1 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+}
+
+.p21 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+
+}
+
+.p2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+}
+
+.botton {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.btn {
+    border: 2px solid var(--white);
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 16px;
+    box-sizing: border-box;
+    height: 56px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 2px solid var(--roseBege);
+    background: var(--roseBege);
+    color: var(--bage)
+}
+
+.btn:active {
+    border: 2px solid var(--dark);
+    background: var(--roseBege);
+    color: var(--dark)
+}
+
+.btn-text {
+    border: none;
+    background: transparent;
+    color: var(--roseBege);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 16px;
+    box-sizing: border-box;
+    height: 56px;
+    cursor: pointer;
+}
+
+.btn-text:hover {
+    border-bottom: 2px solid var(--roseBege);
+}
+
+.btn-text:active {
+    border-bottom: 2px solid var(--orange);
+    color: var(--orange);
+}
