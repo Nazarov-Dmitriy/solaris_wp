@@ -1,0 +1,126 @@
+.reviews {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 60px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    scroll-margin: 88px;
+
+    @media (max-width: 991px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.reviews__title {
+    color: var(--dark);
+    position: relative;
+
+    @media (max-width: 991px) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+.reviews__img {
+    max-width: 401px;
+    width: calc(100% + 60px);
+    margin-left: -60px;
+    margin-top: -30px;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    @media (max-width: 991px) {
+        margin-left: -40px;
+        margin-top: -40px;
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        width: 65px;
+        margin-left: -16px;
+        margin-top: 0px;
+    }
+}
+
+.reviews__animate {
+    opacity: 1;
+    transition: ease-out 1s;
+    transform: translateX(0%);
+}
+
+.reviews__cards {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr 1fr;
+    height: 676px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+        height: 476px;
+    }
+
+    @media (max-width: 576px) {
+        align-self: center;
+    }
+}
+
+.reviews__cards::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.reviews__empty-card {
+    height: 126px;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+
+.reviews__card {
+    max-width: 430px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--roseBege);
+    background-color: var(--lightBege);
+    padding: 24px;
+    grid-row: span 2;
+}
+
+.reviews__card__wrap {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.reviews__card__img {
+    width: 60px;
+    height: 60px;
+}
+
+.reviews__card__name {
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.reviews__card__date {
+    color: var(--dark);
+}
+
+.reviews__card__text {
+    color: var(--dark);
+}

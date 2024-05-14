@@ -1,0 +1,141 @@
+.contest {
+    max-width: 1440px;
+    padding: 80px 60px;
+    margin: auto;
+    box-sizing: border-box;
+    scroll-margin: 88px;
+}
+
+.contest__title {
+    color: var(--dark);
+}
+
+.contest-container {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.item-container {
+    display: flex;
+    gap: 75px;
+    width: 100%;
+    position: relative;
+}
+
+.contest__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark);
+    width: 44.6%;
+    height: fit-content;
+}
+
+.contest__item-btn {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contest__item-btn--current {
+    fill: var(--roseBege);
+    transform: translateX(40px);
+}
+
+.contest__item-btn--current rect {
+    stroke: var(--roseBege);
+}
+
+.contest__item-btn--current path {
+    stroke: var(--white);
+}
+
+.contest-content {
+    max-width: 49.5%;
+    height: fit-content;
+    border: 2px solid var(--roseBege);
+    background: var(--lightBege);
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
+    transition: opacity 0.4s ease;
+}
+
+.contest-content--visible {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.contest-content__title {
+    color: var(--white);
+    padding: 16px;
+    background: var(--roseBege);
+}
+
+.contest-content__subtitle {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+.contest-content__subtitle-text,
+.contest-content__subtitle-start {
+    background: var(--roseBege);
+    color: var(--white);
+    padding: 8px;
+}
+
+.contest-content__description {
+    padding: 16px;
+    color: var(--dark);
+}
+
+@media (max-width: 991px) {
+    .contest {
+        padding: 64px 40px;
+    }
+
+    .contest-container {
+        gap: 20px;
+    }
+
+    .item-container {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .contest__item {
+        width: 100%;
+    }
+
+    .contest__item-btn {
+        rotate: -90deg;
+    }
+
+    .contest__item-btn--current {
+        transform: none;
+        rotate: 90deg;
+    }
+
+    .contest-content {
+        max-width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 576px) {
+    .contest {
+        padding: 40px 16px;
+    }
+
+    .contest-content__subtitle {
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
