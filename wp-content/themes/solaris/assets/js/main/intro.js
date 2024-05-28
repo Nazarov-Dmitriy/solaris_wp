@@ -32,15 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    const introBtn = document.querySelector('.intro__form__btn');
-    const introBtnClose = document.querySelector('.intro__modal__close');
-    const introModal = document.querySelector('.intro__modal');
+    const introBtn = document.querySelector('.intro__form-btn');
 
-    introBtn.addEventListener('click', function () {
-        introModal.classList.add("intro__modal__visible");
-    });
-    introBtnClose.addEventListener('click', function () {
-        introModal.classList.remove("intro__modal__visible");
-    });
-
+    introBtn.querySelectorAll('.shop-item').forEach(item => {
+        item.addEventListener('click', () => {
+            window.location.href = '/page-cabinet-user';
+        })
+    })
 })

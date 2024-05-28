@@ -10,175 +10,269 @@
 @import url("./assets/style/main/reviews.css");
 @import url("./assets/style/main/feedback-form.css");
 @import url("./assets/style/main/footer.css");
+@import url("./assets/style/user/header.css");
+@import url("./assets/style/user/profile.css");
+@import url("./assets/style/user/footer.css");
+@import url("./assets/style/user/shop-balance.css");
+@import url("./assets/style/user/shop.css");
+@import url("./assets/style/user/shop-sales.css");
+@import url("./assets/style/user/contests.css");
 
 @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/Inter-Regular.woff2") format("woff2"),
-      url("./assets/fonts/Inter-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/Inter-Medium.woff2") format("woff2"),
-      url("./assets/fonts/Inter-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/Inter-Bold.woff2") format("woff2"),
-      url("./assets/fonts/Inter-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
-  
-  :root {
-    --dark: #1f2a3e;
-    --roseBege: #dda06b;
-    --orange: #de4700;
-    --lightBege: #fff2de;
-    --white: #ffffff;
-    --roseLight: 
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
   }
-  
-  html,
-  body,
-  div,
-  a,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  ul,
-  li,
-  span,
-  form,
-  input,
-  select,
-  button {
-    margin: 0;
-    padding: 0;
-    text-align: start;
-    font: inherit;
-    text-decoration: none;
-  }
-  
-  html,
-  body,
-  #root {
-    position: relative;
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
-  }
-  
-  .h1 {
-    font-weight: 700;
-    font-size: 54px;
-    line-height: 150%;
-  }
-  
-  .h2 {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 64px;
-  }
-  
-  .h3 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-  }
-  
-  .p1 {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-  }
-  
-  .p21 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 150%;
-  }
-  
-  .p2 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-  }
-  
-  .p2-tablet {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .p2-phone {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-  }
-  
-  .botton {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-  }
-  
-  .btn {
-    border: 2px solid var(--white);
-    background: var(--orange);
-    color: var(--white);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    padding: 16px;
-    box-sizing: border-box;
-    height: 56px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .btn:hover {
-    border: 2px solid var(--roseBege);
-    background: var(--roseBege);
-    color: var(--bage);
-  }
-  
-  .btn:active {
-    border: 2px solid var(--dark);
-    background: var(--roseBege);
-    color: var(--dark);
-  }
-  
-  .btn-text {
-    border: none;
-    background: transparent;
-    color: var(--roseBege);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    padding: 16px;
-    box-sizing: border-box;
-    height: 56px;
-    cursor: pointer;
-  }
-  
-  .btn-text:hover {
-    border-bottom: 2px solid var(--roseBege);
-  }
-  
-  .btn-text:active {
-    border-bottom: 2px solid var(--orange);
-    color: var(--orange);
-  }
-  
+}
+
+:root {
+  --dark: #1f2a3e;
+  --roseBege: #dda06b;
+  --orange: #de4700;
+  --lightBege: #fff2de;
+  --white: #ffffff;
+  --roseLight:
+}
+
+html,
+body,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+span,
+form,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  font: inherit;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+}
+
+html,
+body,
+#root {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 150%;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.p1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.p21 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.p2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.p2-tablet {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.p2-phone {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.botton {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.btn {
+  border: 2px solid var(--white);
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 16px;
+  box-sizing: border-box;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  border: 2px solid var(--roseBege);
+  background: var(--roseBege);
+  color: var(--bage);
+}
+
+.btn:active {
+  border: 2px solid var(--dark);
+  background: var(--roseBege);
+  color: var(--dark);
+}
+
+.btn-text {
+  border: none;
+  background: transparent;
+  color: var(--roseBege);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 16px;
+  box-sizing: border-box;
+  height: 56px;
+  cursor: pointer;
+}
+
+.btn-text:hover {
+  border-bottom: 2px solid var(--roseBege);
+}
+
+.btn-text:active {
+  border-bottom: 2px solid var(--orange);
+  color: var(--orange);
+}
+
+.dropdown {
+  border: 2px solid var(--roseBege);
+  padding: 16px;
+  color: var(--roseBege);
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  background: var(--white);
+  box-sizing: border-box;
+  height: 56px;
+  position: relative;
+  display: flex;
+  align-items: center
+}
+
+.dropdown-input {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--roseBege);
+}
+
+.dropdown-icon {
+  width: 12px;
+  height: 6px;
+  padding-right: 6px;
+}
+
+.dropdown-input::placeholder {
+  color: var(--roseBege);
+}
+
+.dropdown-options {
+  width: 100%;
+  cursor: pointer;
+  background: white;
+  overflow: hidden;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  transition: all 0.7s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.dropdown-options .dropdown-option {
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  color: var(--dark);
+  border: 1px solid var(--roseBege);
+  border-top: none
+}
+
+.dropdown-options .dropdown-option:hover {
+  color: var(--roseBege);
+}
+
+.dropdown.opened .dropdown-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown.opened::before {
+  transform: rotate(-225deg);
+  top: 30px;
+}
+
+.cabinet-container {
+  min-height: 100vh;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+}

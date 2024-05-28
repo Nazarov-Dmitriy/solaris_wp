@@ -1,0 +1,116 @@
+.cabinet-header__container {
+    width: 100%;
+    border-bottom: 2px solid var(--roseBege);
+    background:var(--dark)
+}
+
+.cabinet-header {
+    max-width: 1560px;
+    padding: 8px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.cabinet-header__info {
+    display: flex;
+    gap: 24px
+}
+
+
+.cabinet-header__logo {
+    width: 101px;
+    height: 30px;
+}
+
+.cabinet-header__logo-text {
+    color: var(--roseBege)
+}
+
+.cabinet-header__student-info {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cabinet-header__notification {
+    position: relative;
+}
+
+.cabinet-header__notification-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -10px;
+    color: var(--white);
+    background: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cabinet-header__student-initials {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--roseBege);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--roseBege);
+}
+
+.cabinet-header__list {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.cabinet-header__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .cabinet-header {
+        padding: 8px 40px;
+        flex-direction: column;
+    }
+
+    .cabinet-header__info {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cabinet-header__nav {
+        width: 100%;
+
+    }
+
+    .cabinet-header__list {
+        height: 48px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 576px) {
+    .cabinet-header {
+        padding: 8px 16px;
+    }
+
+    .cabinet-header__link {
+        flex-direction: column;
+    }
+}
