@@ -46,6 +46,8 @@
     height: auto;
     width: 40%;
     overflow: hidden;
+    min-width: 440px;
+    box-sizing: border-box;
 }
 
 .cabinet-shop-history__wrapper {
@@ -226,8 +228,19 @@
 }
 
 .cabinet-shop__img-background {
+    position: absolute;
+    bottom: 24px;
+    right: 63px;
     display: flex;
     justify-content: flex-end;
+    z-index: 0;
+    width: 100%;
+}
+
+.cabinet-shop__img-background img {
+    width: 100%;
+    max-width: 435px;
+
 }
 
 @media (max-width: 1440px) {
@@ -269,6 +282,10 @@
     .cabinet-shop-history__title::after {
         width: 30%;
     }
+
+    .cabinet-shop__img-background {
+        right: 30px;
+    }
 }
 
 @media (max-width: 930px) {
@@ -280,6 +297,7 @@
 @media (max-width: 870px) {
     .cabinet-shop-ready {
         padding: 24px 40px 0 40px;
+        min-width: 0;
     }
 
     .cabinet-shop-ready__list-item {

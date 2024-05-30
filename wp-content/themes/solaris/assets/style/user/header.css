@@ -1,7 +1,6 @@
 .cabinet-header__container {
     width: 100%;
-    border-bottom: 2px solid var(--roseBege);
-    background:var(--dark)
+    border-bottom: 2px solid var(--roseBege)
 }
 
 .cabinet-header {
@@ -108,9 +107,11 @@
 @media (max-width: 576px) {
     .cabinet-header {
         padding: 8px 16px;
-    }
+        gap: 12px;
+    } 
 
-    .cabinet-header__link {
+    .cabinet-header__link{
         flex-direction: column;
+        gap: 0;
     }
 }
