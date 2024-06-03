@@ -8,10 +8,13 @@
                     одно из современных и крупнейших учреждений Саратовской области</p>
             </div>
             <div class="intro__form-container">
-                <form action="" class="intro__form">
-                    <input type="text" class="intro__input p2" placeholder="Логин">
-                    <input type="text" class="intro__input p2" placeholder="Пароль">
-                    <button class="btn" @click="$router.push('/cabinet-student')">Воити в кабинет</button>
+                <div action="" class="intro__form">
+                <?php wp_login_form( array(
+            	'label_username' => 'Логин',
+                'label_password' => 'Пароль',
+                'label_log_in' => 'Войти в кабинет'
+                ) );
+        ?>
                     <button type="button" class="intro__form__btn btn-text">Забыли пароль?</button>
                     <img class="into__bg-rays" src="<?php echo get_template_directory_uri() ?>/assets/image/animation-main/rays.svg" alt="rays">
                     <img class="into__bg-hare" src="<?php echo get_template_directory_uri() ?>/assets/image/animation-main/hare.svg" alt="hare">
@@ -23,7 +26,8 @@
                         <p class="intro__modal__text p1">Если вы забыли пароль от своего личного кабинета, то обратитесь
                             к вашему классному руководителю.</p>
                     </div>
-                </form>
+</div>
             </div>
-        </div>
+
+        </div
     </section>

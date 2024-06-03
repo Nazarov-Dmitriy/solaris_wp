@@ -1,7 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+var loginput = document.getElementById('user_login');
+loginput.setAttribute("placeholder", "Логин");
+var loginput = document.getElementById('user_pass');
+loginput.setAttribute("placeholder", "Пароль");
+document.addEventListener("DOMContentLoaded", function() {
     let title = document.querySelector(".intro__title");
     let decription = document.querySelector('.intro__text');
-
     window.addEventListener('resize', () => {
         introClass();
     })
@@ -36,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const introBtnClose = document.querySelector('.intro__modal__close');
     const introModal = document.querySelector('.intro__modal');
 
-    introBtn.addEventListener('click', function () {
+    introBtn.addEventListener('click', function() {
         introModal.classList.add("intro__modal__visible");
     });
-    introBtnClose.addEventListener('click', function () {
+    introBtnClose.addEventListener('click', function() {
         introModal.classList.remove("intro__modal__visible");
     });
 

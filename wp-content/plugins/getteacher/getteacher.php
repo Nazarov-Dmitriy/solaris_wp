@@ -5,7 +5,14 @@
  * Author: Чапланов Иван Сергеевич | BitWizArts
  * Author URI: NONE
  */
-add_shortcode( 'teacherID', 'curator_get' ); 
-    function curator_get($atts){
-        return 'UNO'; 
+ 
+ function get_teacher_id($atts) {
+    $atts = shortcode_atts(array(
+    'id' => '10', // Значение по умолчанию для атрибута ID
+    ), $atts);
+    
+    return $atts['id'];
     }
+    
+    // Регистрируем шорткод и указываем обработчик для него
+    add_shortcode('TeacherID', 'get_teacher_id');
