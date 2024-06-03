@@ -27,46 +27,46 @@
     ];
 
     $infoBuyHistoryItem = [
-        [
-            "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
-            "amount" => 200,
-            "orderNumber" => "Стикеры солярики № 33500967",
-            "orderStatus" => "заказ оплачен",
-            "time" => "13.02.2024",
-            "img_valute" => "/assets/image/cabinet-shop/currency.png",
-        ],
-        [
-            "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
-            "amount" => 150,
-            "orderNumber" => "Антидвойка № 33500967",
-            "orderStatus" => "заказ оплачен",
-            "time" => "13.02.2024",
-            "img_valute" => "/assets/image/cabinet-shop/currency.png",
-        ],
-        [
-            "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
-            "amount" => 150,
-            "orderNumber" => "Антидвойка № 33500967",
-            "orderStatus" => "заказ оплачен",
-            "time" => "13.02.2024",
-            "img_valute" => "/assets/image/cabinet-shop/currency.png",
-        ],
-        [
-            "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
-            "amount" => 150,
-            "orderNumber" => "Стикеры солярики № 33500967",
-            "orderStatus" => "заказ оплачен",
-            "time" => "13.02.2024",
-            "img_valute" => "/assets/image/cabinet-shop/currency.png",
-        ],
-        [
-            "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
-            "amount" => 150,
-            "orderNumber" => "Стикеры солярики № 33500967",
-            "orderStatus" => "заказ оплачен",
-            "time" => "13.02.2024",
-            "img_valute" => "/assets/image/cabinet-shop/currency.png",
-        ],
+        // [
+        //     "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
+        //     "amount" => 200,
+        //     "orderNumber" => "Стикеры солярики № 33500967",
+        //     "orderStatus" => "заказ оплачен",
+        //     "time" => "13.02.2024",
+        //     "img_valute" => "/assets/image/cabinet-shop/currency.png",
+        // ],
+        // [
+        //     "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
+        //     "amount" => 150,
+        //     "orderNumber" => "Антидвойка № 33500967",
+        //     "orderStatus" => "заказ оплачен",
+        //     "time" => "13.02.2024",
+        //     "img_valute" => "/assets/image/cabinet-shop/currency.png",
+        // ],
+        // [
+        //     "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
+        //     "amount" => 150,
+        //     "orderNumber" => "Антидвойка № 33500967",
+        //     "orderStatus" => "заказ оплачен",
+        //     "time" => "13.02.2024",
+        //     "img_valute" => "/assets/image/cabinet-shop/currency.png",
+        // ],
+        // [
+        //     "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
+        //     "amount" => 150,
+        //     "orderNumber" => "Стикеры солярики № 33500967",
+        //     "orderStatus" => "заказ оплачен",
+        //     "time" => "13.02.2024",
+        //     "img_valute" => "/assets/image/cabinet-shop/currency.png",
+        // ],
+        // [
+        //     "imgSrc" => "/assets/image/cabinet-shop/solaris2.png",
+        //     "amount" => 150,
+        //     "orderNumber" => "Стикеры солярики № 33500967",
+        //     "orderStatus" => "заказ оплачен",
+        //     "time" => "13.02.2024",
+        //     "img_valute" => "/assets/image/cabinet-shop/currency.png",
+        // ],
     ];
     ?>
 

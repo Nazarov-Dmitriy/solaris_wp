@@ -419,3 +419,7 @@
 .pagination-dots--right-show {
     opacity: 1;
 }
+
+.contnent-empty{
+    color: var(--dark)
+}
