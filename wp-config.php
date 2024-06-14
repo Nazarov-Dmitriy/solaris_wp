@@ -21,12 +21,15 @@
 // ** Параметры базы данных: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
 define( 'DB_NAME', 'solaris' );
+// define( 'DB_NAME', 'f0948728_solaris' );
 
 /** Имя пользователя базы данных */
 define( 'DB_USER', 'solaris-admin' );
+// define( 'DB_USER', 'f0948728_solaris-admin' );
 
 /** Пароль к базе данных */
 define( 'DB_PASSWORD', 'adminsol2024' );
+// define( 'DB_PASSWORD', 'adminsol2024' );
 
 /** Имя сервера базы данных */
 define( 'DB_HOST', 'localhost' );
@@ -36,6 +39,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** Схема сопоставления. Не меняйте, если не уверены. */
 define( 'DB_COLLATE', '' );
+
+// lдля бд на серваке http://solaris-wp.ru//
+
 
 /**#@+
  * Уникальные ключи и соли для аутентификации.

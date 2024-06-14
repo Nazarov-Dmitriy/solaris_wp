@@ -1,44 +1,46 @@
 
-let arr = [
-    {
-        title: "Название конкурса",
-        date_publication: "Дата публикации",
-        direction: "Нарпавление",
-        start_date: "01.05.2024",
-        descption:
-            "Идейные соображения высшего порядка, а также постоянный количественный рост ",
-    },
-    {
-        title: "Название конкурса2",
-        date_publication: "Дата публикации",
-        direction: "Нарпавление",
-        start_date: "01.05.2024",
-        descption:
-            "Идейные соображения высшего порядка, а также постоянный количественный рост ",
-    },
-    {
-        title: "Название конкурса3",
-        date_publication: "Дата публикации",
-        direction: "Нарпавление",
-        start_date: "01.05.2024",
-        descption:
-            "Идейные соображения высшего порядка, а также постоянный количественный рост ",
-    },
-    {
-        title: "Название конкурса4",
-        date_publication: "Дата публикации",
-        direction: "Нарпавление",
-        start_date: "01.05.2024",
-        descption:
-            "Идейные соображения высшего порядка, а также постоянный количественный рост ",
-    },
-];
+// let arr = [
+//     {
+//         title: "Название конкурса",
+//         date_publication: "Дата публикации",
+//         direction: "Нарпавление",
+//         start_date: "01.05.2024",
+//         descption:
+//             "Идейные соображения высшего порядка, а также постоянный количественный рост ",
+//     },
+//     {
+//         title: "Название конкурса2",
+//         date_publication: "Дата публикации",
+//         direction: "Нарпавление",
+//         start_date: "01.05.2024",
+//         descption:
+//             "Идейные соображения высшего порядка, а также постоянный количественный рост ",
+//     },
+//     {
+//         title: "Название конкурса3",
+//         date_publication: "Дата публикации",
+//         direction: "Нарпавление",
+//         start_date: "01.05.2024",
+//         descption:
+//             "Идейные соображения высшего порядка, а также постоянный количественный рост ",
+//     },
+//     {
+//         title: "Название конкурса4",
+//         date_publication: "Дата публикации",
+//         direction: "Нарпавление",
+//         start_date: "01.05.2024",
+//         descption:
+//             "Идейные соображения высшего порядка, а также постоянный количественный рост ",
+//     },
+// ];
 
 document.addEventListener("DOMContentLoaded", function () {
     let container = document.querySelector(".contest-container");
+    let arrContent = arrContestToday;
+
     let title = document.querySelector(".contest__title");
 
-    arr.forEach((item) => {
+    arrContent.forEach((item) => {
         let elem = `
       <div class="item-container">
           <div class="contest__item">

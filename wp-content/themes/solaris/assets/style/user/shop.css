@@ -1,0 +1,140 @@
+.shop-container {
+    width: 100%;
+    background: var(--dark);
+}
+
+.shop {
+    max-width: 1560px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 844px;
+    box-sizing: border-box;
+}
+
+.shop-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 17px;
+}
+
+.shop-item {
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--roseBege);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shop-item:hover {
+    border-color: var(--orange)
+}
+
+.shop-item:hover .shop-price-wraper {
+    color: var(--orange)
+}
+
+.shop-item:hover .shop-icon path {
+    fill: var(--orange)
+}
+
+.shop-item__popular {
+    background: var(--lightBege)
+}
+
+.shop-item__popular .shop-subtitle {
+    color: var(--dark)
+}
+
+.shop-item__popular .shop-price-wraper {
+    color: var(--dark)
+}
+
+.shop-item__popular .shop-icon path {
+    fill: var(--dark)
+}
+
+.shop-img {
+    width: 100%;
+}
+
+.shop-contnent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ;
+}
+
+.shop-subtitle {
+    color: var(--white);
+}
+
+.shop-price-wraper {
+    display: flex;
+    align-items: center;
+    color: var(--roseBege);
+    gap: 8px;
+}
+
+
+@media (max-width: 1200px) {
+    .shop {
+        padding: 36px 60px;
+    }
+
+    .shop-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-contnent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+
+    .shop-img {
+        aspect-ratio: 3/2;
+    }
+
+    .shop-subtitle {
+        font-size: 16px;
+    }
+
+    .shop-price {
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    .shop-icon {
+        width: 22px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop {
+        padding: 32px 40px;
+    }
+
+    .shop-img {
+        aspect-ratio: 1.4 / 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .shop-list {
+        grid-template-columns: 1fr;
+    }
+
+    .shop {
+        padding: 24px 16px;
+    }
+}

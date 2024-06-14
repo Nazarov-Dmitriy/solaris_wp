@@ -1,0 +1,102 @@
+.shop-balance {
+    width: 100%;
+    background: var(--lightBege)
+}
+
+.balance {
+    max-width: 1560px;
+    padding: 17px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box
+}
+
+.balance-description {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.balance-text {
+    color: var(--dark)
+}
+
+.balance-account {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark)
+}
+
+.balance-account-number {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .balance {
+        padding: 8px 60px;
+    }
+
+    .balance-account-number {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .balance {
+        padding: 8px 40px;
+    }
+
+    .balance-account {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .balance-account {
+        gap: 8px;
+    }
+
+    .balance-account-number {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .balance {
+        padding: 8px 16px;
+        gap: 40px;
+    }
+
+    .balance-description {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .balance-text {
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .balance-account {
+        flex-wrap: wrap;
+    }
+
+    .balance-account {
+        font-size: 16px;
+        justify-content: end;
+
+    }
+
+    .balance-account-number {
+        font-size: 24px;
+    }
+}

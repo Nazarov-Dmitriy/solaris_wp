@@ -1,4 +1,5 @@
 <?php
+add_action( 'wp_enqueue_scripts', 'add_script_main', 10 );
 get_header();
 ?>
 
@@ -15,5 +16,5 @@ get_header();
 
 
 <?php
-//  include 'form.php';
+
 get_footer();

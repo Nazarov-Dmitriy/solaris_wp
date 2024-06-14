@@ -1,56 +1,60 @@
-  <section class="trend-container" id="trend">
-    <div class="trend">
-      <div class="trend__content">
-        <div class="trend__coin">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
-          <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
-          <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
-        </div>
-        <p class="trend__text p1">
-          В лицее каждую неделю проводятся конкурсы по различным направлениям,
-          учитывая пожелания и инициативы всех участников образовательного
-          процесса
-        </p>
-        <div class="trend__list">
-          <h2 class="trend-subtitle h2">Направления</h2>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
+<?php
+$arr = [
+  [
+    "title" => "Название направления",
+  ],
+  [
+    "title" => "Название направления 1",
+  ],
+  [
+    "title" => "Название направления 2",
+  ],
+  [
+    "title" => "Название направления 3",
+  ],
+  [
+    "title" => "Название направления 4",
+  ],
+  [
+    "title" => "Название направления 5",
+  ],
+  [
+    "title" => "Название направления 6",
+  ],
+  [
+    "title" => "Название направления 7",
+  ],
+  [
+    "title" => "Название направления 8",
+  ],
+  [
+    "title" => "Название направления 9",
+  ],
 
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
 
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <div class="trend-item-btn h3">Название направления</div>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-          <div class="trend-item">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trendName.png" alt="" class="trend-img" />
-            <button class="trend-item-btn h3">Название направления</button>
-          </div>
-        </div>
+];
+wp_localize_script('solaris_main_trend', 'arrTrend', $arr);
+?>
+
+<section class="trend-container" id="trend">
+  <div class="trend">
+    <div class="trend__content">
+      <div class="trend__coin">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
+        <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
+        <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend-coin.png" alt="" class="trend__coin-img" />
       </div>
-      <div class="trend-container-img">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend.png" class="trend-main-img" alt="img" />
+      <p class="trend__text p1">
+        В лицее каждую неделю проводятся конкурсы по различным направлениям,
+        учитывая пожелания и инициативы всех участников образовательного
+        процесса
+      </p>
+      <div class="trend__list">
+        <h2 class="trend-subtitle h2">Направления</h2>
       </div>
     </div>
-  </section>
+    <div class="trend-container-img">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend.png" class="trend-main-img" alt="img" />
+    </div>
+  </div>
+</section>

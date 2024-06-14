@@ -1,0 +1,110 @@
+.uc-portfolio {
+    background-color: var(--white);
+    display: flex;
+    flex-grow: 1;
+}
+
+.uc-portfolio__container {
+    max-width: 1560px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 24px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    @media(max-width: 991px) {
+        padding: 24px 40px;
+    }
+
+    @media(max-width:576px) {
+        padding: 24px 16px;
+    }
+}
+
+.uc-dropdown__portfolio {
+    width: 243px;
+}
+
+.uc-portfolio__table {
+    height: fit-content;
+    width: auto;
+    display: grid;
+    border-collapse: collapse;
+    grid-template-columns:
+        minmax(242px, 722px) 158px 180px 112px minmax(100px, 112px) minmax(80px, 156px);
+    grid-template-rows: 56px auto;
+    gap: 16px 0;
+    align-content: center;
+
+    @media(max-width: 991px) {
+        grid-template-columns:
+            minmax(338px, 722px) 158px 180px 112px minmax(100px, 112px) minmax(80px, 156px);
+    }
+
+    ;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.uc-portfolio__table::-webkit-scrollbar {
+    display: none;
+}
+
+.uc-portfolio__table thead,
+.uc-portfolio__table tbody,
+.uc-portfolio__table tr {
+    display: contents;
+}
+
+.uc-portfolio__table th,
+.uc-portfolio__table td {
+    text-align: center;
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.uc-portfolio__table th {
+    padding: 16px;
+}
+
+.uc-portfolio__table th:first-child {
+    text-align: start;
+}
+
+.uc-portfolio__table td:first-child {
+    text-align: start;
+}
+
+.uc-portfolio__table td {
+    padding: 8px;
+}
+
+.uc-portfolio__table tbody td {
+    background: var(--lightBege)
+}
+
+.uc-portfolio__table td p {
+    text-align: center;
+}
+
+.uc-portfolio__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: auto;
+}
+
+.uc-portfolio__btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

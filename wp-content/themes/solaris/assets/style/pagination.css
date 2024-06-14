@@ -1,0 +1,104 @@
+/* Пагинцаия */
+.pagination__container {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pagination-prev,
+.pagination-next {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--dark);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+    border-color: var(--roseBege);
+}
+
+.pagination-prev:hover svg path,
+.pagination-next:hover svg path {
+    stroke: var(--roseBege);
+
+}
+
+.pagination-item {
+    cursor: pointer;
+}
+
+.pagination-item--active {
+    color: var(--roseBege);
+    text-decoration: solid underline var(--roseBege) 2px;
+    text-underline-offset: 8px
+}
+
+.pagination-prev {
+    margin-right: 44px;
+}
+
+.pagination-next {
+    margin-left: 44px;
+}
+
+.pagination-prev--hidden,
+.pagination-next--hidden {
+    overflow: hidden;
+}
+
+.pagination-dots--left,
+.pagination-dots--right {
+    user-select: none;
+    opacity: 0;
+}
+
+.pagination-dots--left-show,
+.pagination-dots--right-show {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.contnent-empty {
+    color: var(--dark)
+}
+
+.pagination__container.user-shop {
+
+    .pagination-prev,
+    .pagination-next {
+        border-color: var(--white)
+    }
+
+    .pagination-prev svg path,
+    .pagination-next svg path {
+        stroke: var(--white)
+    }
+
+    .pagination-item--active {
+        color: var(--white);
+    }
+
+    .pagination-item {
+        color: var(--white)
+    }
+
+    .pagination-dots--left,
+    .pagination-dots--right {
+        color: var(--white)
+    }
+
+    .pagination-item--active {
+        text-decoration-color: var(--white);
+    }
+
+}

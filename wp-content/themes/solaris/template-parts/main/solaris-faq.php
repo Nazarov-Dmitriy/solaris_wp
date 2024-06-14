@@ -1,4 +1,4 @@
-  <section id="solarifFaq">
+  <section id="solarisFaq">
     <div class="solaris-faq">
       <h2 class="solaris-faq__title h2">Часто задаваемые вопросы</h2>
       <div class="solaris-faq-container">

@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let arrContent = arr;
+    let indexShow = 3;
+    let list = document.querySelector('.previewshop__list');
+
     const previewshop = document.querySelector(".previewshop");
     const previewshopImg = document.querySelector(".previewshop__img");
     const previewshopText = document.querySelector(".previewshop__text");
@@ -17,11 +21,32 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", setVisible);
 
     const button = document.querySelector('.previewshop-btn');
-    const previewshopCard = document.querySelectorAll('.previewshop__card__hidden');
 
     button.addEventListener('click', function () {
-        previewshopCard.forEach(function (card) {
-            card.classList.remove("previewshop__card__hidden");
-        })
+        indexShow += 3
+        renderContent()
     });
+
+    function renderContent() {
+        list.textContent = '';
+        arrContent.forEach((elem, index) => {
+            if (index < indexShow) {
+                let item =
+                `
+                <div class="previewshop__card">
+                    <img src="/wp-content/themes/solaris/assets/image/cabinet/image.png" alt="" class="previewshop-img">
+                    <div class="previewshop__card-footer">
+                        <p class="previewshop__card-subtitle p1">${elem.title}</p>
+                        <p class="previewshop__card-cost h2">${elem.price}
+                        <img src="/wp-content/themes/solaris/assets/icon/valute.svg" alt="valute" class="previewshop__card-icon">
+                        </p>
+                    </div>
+                </div>
+                `
+                list.insertAdjacentHTML("beforeEnd", item)
+            }
+        })
+    }
+
+    renderContent()
 });
