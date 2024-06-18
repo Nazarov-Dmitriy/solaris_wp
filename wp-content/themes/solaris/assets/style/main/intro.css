@@ -274,7 +274,7 @@
     margin-top: 24px;
 }
 
-.form-hidden{
+.form-hidden {
     opacity: 0;
 }
 
@@ -320,6 +320,16 @@
 @media (max-width: 991px) {
     .intro {
         padding: 40px;
+    }
+
+    .intro__title.h1 {
+        font-weight: 700;
+        font-size: 48px;
+    }
+
+    .intro__text.p1 {
+        font-weight: 400;
+        font-size: 16px;
     }
 
     .intro:before {
@@ -383,6 +393,12 @@
         gap: clamp(20px, 1vw, 100px);
     }
 
+    .intro__title.h1 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+   
     .intro__description {
         max-width: 330px;
     }

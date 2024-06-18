@@ -1,137 +1,132 @@
 .more-competitions__img-tg.animate {
     opacity: 1;
     transform: translateY(20px);
-}
-
-.more-competitions {
+  }
+  
+  .more-competitions {
     background: radial-gradient(65% 65% at 70% 47%,
-            rgb(221, 160, 107) 0%,
-            rgb(48, 58, 76) 100%);
+        rgb(221, 160, 107) 0%,
+        rgb(48, 58, 76) 100%);
     overflow: hidden;
     box-sizing: border-box;
     scroll-margin: 88px;
-}
-
-.more-competitions__body {
+  }
+  
+  .more-competitions__body {
     position: relative;
     margin-bottom: 500px;
-
+  
     max-width: 1440px;
     height: auto;
-
+  
     margin: auto;
     box-sizing: border-box;
-}
-
-.more-competitions__title {
+  }
+  
+  .more-competitions__title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 48px;
     line-height: 133%;
     color: var(--white);
-
+  
     margin-left: 90px;
     margin-bottom: 47px;
     padding-top: 80px;
     padding-bottom: 242px;
-}
-
-.more-competitions__title span {
+  }
+  
+  .more-competitions__title span {
     display: block;
-}
-
-.more-competitions__text span {
+  }
+  
+  .more-competitions__text span {
     text-align: center;
     display: block;
-}
-
-.more-competitions__text-wrap {
+  }
+  
+  .more-competitions__text-wrap {
     position: absolute;
     top: 264px;
-    right: 512px;
-
-    max-width: 400px;
-
+    right: 512px;  
+    max-width: 420px;
     transform: translate(0, 60px);
     padding: 16px 80px;
     background-color: var(--white);
-
     border-radius: 16px;
     opacity: 0;
     transition: 1.5s;
-}
-
-.more-competitions__text {
+  }
+  
+  .more-competitions__text {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
     text-align: center;
     color: #1f2a3e;
-}
-
-.more-competitions__text-wrap-bottom {
+  }
+  
+  .more-competitions__img-bottom {
     position: absolute;
-    top: 381px;
-    right: 491px;
-    transform: translate(0, 60px);
-    opacity: 0;
-    transition: 1.5s;
-
-}
-
-.more-competitions__img {
+    right: -21px;
+    bottom: -54px;
+  }
+  
+  
+  
+  .more-competitions__img {
     position: absolute;
     top: 57px;
     right: -93px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+  
     width: 823px;
     height: 620px;
-}
-
-.more-competitions__btn {
+  }
+  
+  .more-competitions__btn {
     border: 2px solid var(--white);
     padding: 14px 15px;
     background: #de4700;
-
+  
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     color: var(--white);
-
+  
     cursor: pointer;
-
+  
     margin-left: 89px;
     margin-bottom: 58px;
-
+  
     transition: 0.4s;
-}
-
-.more-competitions__btn:focus {
+  }
+  
+  .more-competitions__btn:focus {
     outline: none;
-}
-
-.more-competitions__img-coin--left {
+  }
+  
+  .more-competitions__img-coin--left {
     width: 167px;
     height: 166px;
-
+  
     position: absolute;
     top: 351px;
     left: 104px;
     transform: rotate(-45deg);
-}
-
-.more-competitions__img-coin--right {
+  }
+  
+  .more-competitions__img-coin--right {
     position: absolute;
     bottom: 37px;
     left: 354px;
-}
-
-.more-competitions__img-tg {
+  }
+  
+  .more-competitions__img-tg {
     position: absolute;
     top: 400px;
     right: 21px;
@@ -142,164 +137,160 @@
     cursor: pointer;
     opacity: 0;
     transition: opacity 1.5s;
-}
-
-.more-competitions__img-tg svg {
+  }
+  
+  .more-competitions__img-tg svg {
     transform: scale(1.03);
-}
-
-.more-competitions__link-tg {
+  }
+  
+  .more-competitions__link-tg {
     color: #1f2a3e;
     transition: 0.4s;
-}
-
-.more-competitions__link-tg:focus {
+  }
+  
+  .more-competitions__link-tg:focus {
     outline: none;
-}
+  }
 
-
-
-.animate {
+  .animate {
     opacity: 1;
-}
-
-@media (max-width: 1230px) {
+  }
+  
+  @media (max-width: 1230px) {
     .more-competitions__img-coin--left {
-        left: 78px;
+      left: 78px;
     }
-}
-
-/* Примерный адаптив на планшеты */
-
-@media (max-width: 1200px) {
+  }
+  
+  /* Примерный адаптив на планшеты */
+  
+  @media (max-width: 1200px) {
     .more-competitions__body {
-        max-width: 770px;
+      max-width: 770px;
     }
-
+  
     .more-competitions__title {
-        font-size: 24px;
-
-        margin-bottom: -69px;
-        padding-top: 32px;
-        padding-bottom: 183px;
-        margin-bottom: 0;
-        margin-left: 39px;
-
-        line-height: 150%;
-        max-width: 385px;
+      font-size: 24px;
+  
+      margin-bottom: -69px;
+      padding-top: 32px;
+      padding-bottom: 183px;
+      margin-bottom: 0;
+      margin-left: 39px;
+  
+      line-height: 150%;
+      max-width: 385px;
     }
-
+  
     .more-competitions__title span {
-        display: block;
+      display: block;
     }
-
+  
     .more-competitions span {
-        display: inline;
+      display: inline;
     }
-
+  
     .more-competitions__img {
-        width: 290px;
-        height: 219px;
-
-        top: 143px;
-        right: 0;
+      width: 290px;
+      height: 219px;
+  
+      top: 143px;
+      right: 0;
     }
-
+  
     .more-competitions__img-tg {
-        width: 45px;
-        top: 252px;
-        height: 40px;
-        right: 41px;
+      width: 45px;
+      top: 252px;
+      height: 40px;
+      right: 41px;
     }
-
+  
     .more-competitions__img-tg svg {
-        width: 45px;
-        height: auto;
-        border-radius: 50%;
-        transform: scale(1.08);
-        overflow: hidden;
+      width: 45px;
+      height: auto;
+      border-radius: 50%;
+      transform: scale(1.08);
+      overflow: hidden;
     }
-
+  
     .more-competitions__text {
-        font-size: 16px;
-        max-width: 223px;
+      font-size: 16px;
+      max-width: 223px;
     }
-
+  
     .more-competitions__text-wrap {
-        font-size: 14px;
-        right: 251px;
-        top: 66px;
-        padding: 16px 57px;
+      font-size: 14px;
+      right: 251px;
+      top: 66px;
+      padding: 16px 57px;
     }
-
-    .more-competitions__text-wrap-bottom {
-        top: 147px;
-        right: 231px;
-    }
-
+  
+  
     .more-competitions__img-coin--left {
-        display: none;
+      display: none;
     }
-
+  
     .more-competitions__img-coin--right {
-        width: 37px;
-        bottom: 29px;
-
+      width: 37px;
+      bottom: 29px;
+  
     }
-
+  
     .more-competitions__btn {
-        margin-bottom: 20px;
-        padding: 14px 28px;
-        margin-left: 39px;
+      margin-bottom: 20px;
+      padding: 14px 28px;
+      margin-left: 39px;
     }
-}
-
-@media (max-width: 685px) {
+  }
+  
+  @media (max-width: 685px) {
     .more-competitions__img-coin--right {
-        left: 49%;
+      left: 49%;
     }
-}
-
-/* Примерный адаптив на мобилки */
-
-@media (max-width: 650px) {
+  }
+  
+  /* Примерный адаптив на мобилки */
+  
+  @media (max-width: 650px) {
     .more-competitions__body {
-        max-width: 280px;
+      max-width: 280px;
     }
 
+    .more-competitions__img-bottom {
+      bottom: -36px
+    }
+  
     .more-competitions__title {
-        max-width: 249px;
-        margin-bottom: 205px;
-        padding-top: 40px;
-        margin-left: 16px;
+      max-width: 249px;
+      margin-bottom: 205px;
+      padding-top: 40px;
+      margin-left: 0;
     }
-
+  
     .more-competitions__text-wrap {
-        top: 140px;
-        right: 0;
-        max-width: 250px;
+      top: 140px;
+      right: initial;
+      max-width: 250px;
+      padding: 16px;
+      left: 0;
     }
-
-    .more-competitions__text-wrap-bottom {
-        top: 244px;
-        right: -21px;
-    }
-
+  
+  
     .more-competitions__img {
-        top: 354px;
-        left: 0;
+      top: 354px;
+      left: 0;
     }
-
+  
     .more-competitions__btn {
-        margin-left: 18px;
+      margin-left: 18px;
     }
-
+  
     .more-competitions__img-tg {
-        top: 463px;
-        right: 33px;
+      top: 463px;
+      right: 33px;
     }
-
+  
     .more-competitions__img-coin--right {
-        display: none;
+      display: none;
     }
-}
+  }

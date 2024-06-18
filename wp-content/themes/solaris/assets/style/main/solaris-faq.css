@@ -111,8 +111,9 @@
         padding-right: 40px;
     }
 
-    .solaris-faq__title {
+    .solaris-faq__title.h2 {
         font-size: 24px;
+        line-height: 150%;
     }
 
     .solaris-faq-container {

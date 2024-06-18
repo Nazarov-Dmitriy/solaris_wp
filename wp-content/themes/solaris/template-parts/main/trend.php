@@ -50,11 +50,11 @@ wp_localize_script('solaris_main_trend', 'arrTrend', $arr);
         процесса
       </p>
       <div class="trend__list">
-        <h2 class="trend-subtitle h2">Направления</h2>
+        <h2 class="trend-subtitle ">Направления</h2>
       </div>
     </div>
-    <div class="trend-container-img">
+    <!-- <div class="trend-container-img">
       <img src="<?php echo get_template_directory_uri() ?>/assets/image/trend/trend.png" class="trend-main-img" alt="img" />
-    </div>
+    </div> -->
   </div>
 </section>

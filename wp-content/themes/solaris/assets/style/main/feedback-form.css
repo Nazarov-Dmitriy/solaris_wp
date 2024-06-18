@@ -66,13 +66,18 @@
     text-align: center;
 
     @media (max-width: 991px) {
-        font-size: 24px;
-        line-height: 36px;
         margin-bottom: 100px;
     }
 
     @media (max-width: 576px) {
         margin-bottom: 12px;
+    }
+}
+
+.feedback__title.h2{
+    @media (max-width: 991px) {
+        font-size: 24px;
+        line-height: 36px;
     }
 }
 

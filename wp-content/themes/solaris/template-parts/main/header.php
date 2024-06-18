@@ -2,7 +2,10 @@
     <div class="header">
       <div class="header-logo">
         <img src="<?php echo get_template_directory_uri() ?>/assets/icon/logo.svg" alt="">
+
       </div>
+      <span class="header-line"></span>
+
       <div class="header-menu">
         <nav>
           <ul class="header__list">

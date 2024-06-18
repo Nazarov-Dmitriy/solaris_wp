@@ -98,6 +98,9 @@
     background: var(--dark);
     color: var(--white);
     text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
 }
 
 .trend-item {
@@ -172,6 +175,7 @@
 
 .trend-main-img {
     width: 100%;
+    margin-bottom: -4px;
 }
 
 .trend__list::-webkit-scrollbar {
@@ -179,7 +183,7 @@
     height: 0;
 }
 
-@media (max-width: 1293px) {
+@media (max-width: 1230px) {
     .trend-item-btn {
         font-size: 24px;
     }
@@ -389,7 +393,8 @@
 
     .trend__coin-img:nth-child(3) {
         top: 0;
-        left: 63%;
+        left: initial;
+        right: 46px;
         width: 70px;
         transform: translateX(48%) rotate(-60deg);
     }

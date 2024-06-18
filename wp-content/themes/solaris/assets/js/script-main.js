@@ -1,6 +1,5 @@
 import "./main/header.js";
 import "./main/intro.js";
-import "./main/about-solarik.js";
 import "./main/about-working.js";
 import "./main/more-competitions.js";
 import "./main/solaris-faq.js";

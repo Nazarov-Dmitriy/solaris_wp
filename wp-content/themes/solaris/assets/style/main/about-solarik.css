@@ -71,6 +71,12 @@
         padding: 64px 40px;
     }
 
+    .about-solaric-title.h2{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
     .about-solaric__text {
         max-width: 100%;
     }
@@ -108,7 +114,7 @@
 
     .about-solaric__coin:nth-child(4) {
         top: 17px;
-        right: 9px;
+        right: 11px;
         width: 57px;
         height: 56px;
     }

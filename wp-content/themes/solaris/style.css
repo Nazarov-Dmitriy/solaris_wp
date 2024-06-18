@@ -20,6 +20,10 @@
 @import url("./assets/style/pagination.css");
 @import url("./assets/style/user/portfolio.css");
 
+/* *{
+  outline: 4px solid  green !important;
+} */
+
 @font-face {
   font-family: "Inter";
   src: url("./assets/fonts/Inter-Regular.woff2") format("woff2"),

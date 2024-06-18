@@ -14,10 +14,9 @@
           Подпишись на наш чат-бот в
           <span>телеграмм!</span>
         </p>
-      </div>
-      <div class="more-competitions__text-wrap-bottom">
         <img class="more-competitions__img-bottom" src="<?php echo get_template_directory_uri() ?>/assets/image/more-competitions/text-wrap-bottom.png" alt="" />
       </div>
+
       <img class="more-competitions__img-coin more-competitions__img-coin--left" src="<?php echo get_template_directory_uri() ?>/assets/image/more-competitions/coin.png" alt="" />
       <img class="more-competitions__img-coin more-competitions__img-coin--right" src="<?php echo get_template_directory_uri() ?>/assets/image/more-competitions/coin.png" alt="" />
       <button class="more-competitions__btn btn">Подписаться на чат-бот</button>
