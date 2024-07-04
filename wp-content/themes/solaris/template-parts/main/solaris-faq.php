@@ -84,7 +84,7 @@
             <div class="solaris-faq-content">
               <p class="solaris-faq__description p2">
                 Доступ к личному кабинету выдает классный руководитель учащегося
-                с лицее «Солярис».5
+                с лицее «Солярис».
               </p>
             </div>
           </div>

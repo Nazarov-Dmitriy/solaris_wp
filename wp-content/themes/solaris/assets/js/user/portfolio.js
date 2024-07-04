@@ -1,10 +1,8 @@
 import pagination from '../pagination.js'
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log(data);
-    const dropdown = document.querySelectorAll('.dropdown');
+    const dropdown = document.querySelector('#role');
     const body = document.body;
-
     const toggleDropdown = (event, el) => {
         event.stopPropagation();
         el.classList.toggle('opened');
@@ -22,20 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     };
 
-    dropdown.forEach(el => {
-        el.addEventListener('click', (evetn) => toggleDropdown(evetn, el));
-        el.querySelectorAll('.dropdown-option').forEach(opt => {
-            opt.addEventListener('click', (evt) => selectOption(evt, el.childNodes[0]))
-        })
+    dropdown.addEventListener('click', (evetn) => toggleDropdown(evetn, dropdown));
+
+    dropdown.querySelectorAll('.dropdown-option').forEach(opt => {
+        opt.addEventListener('click', (evt) => selectOption(evt, dropdown.childNodes[1]))
     })
 
-    body.addEventListener('click', closeDropdownFromOutside);
 
+    // dropdown.forEach(el => {
+    //     console.log(el);
+    //     el.addEventListener('click', (evetn) => toggleDropdown(evetn, el));
+    //     el.querySelectorAll('.dropdown-option').forEach(opt => {
+    //         opt.addEventListener('click', (evt) => selectOption(evt, el.childNodes[0]))
+    //     })
+    // })
+
+    body.addEventListener('click', closeDropdownFromOutside);
     
     let arrContest = data;
 
     let list = document.querySelector('.uc-portfolio__table tbody');
-    console.log(list);
     let arrPagination = [];
 
     function resArrayContent(arr) {
@@ -43,32 +47,40 @@ document.addEventListener("DOMContentLoaded", function () {
         renderContent();
     }
 
+    function renderRole(role) {
+        let str='';
+        role.forEach(el => str += `<p>${el}</p>`)
+        return str
+    }
+
     function renderContent() {
         list.textContent = '';
         arrPagination.forEach(elem => {
             let item =
-                ` <div class="uc__item">
-                    <p class="uc__decription h3">
+                ` 
+                <tr id=${elem.id}>
+                    <td>Городской конкурс сочинений
                         ${elem.title}
-                    </p>
-                    <div class="uc__directions">
-                        <p class="uc__direction p2">Журналист</p>
-                        <p class="uc__direction p2">Историк</p>
-                        <p class="uc__direction p2">Патриот</p>
-                        <p class="uc__direction p2">Юнармеец</p>
-                    </div>
-                    <div class="uc__info">
-                        <p class="uc__publication p2">
-                            Дата публикации 02.03.2024
-                        </p>
-                        <buttom class="uc__info-btn btn">Узнать подробнее</buttom>
-                    </div>
-                </div>`
+                    </td>
+                    <td>
+                    ${renderRole(elem.role)}
+                    </td>
+                    <td>Иванова М.И</td>
+                    <td>${elem.money}</td>
+                    <td>${elem.balls} </td>
+                    <td>${elem.status}</td>
+                </tr>
+                `
             list.insertAdjacentHTML("beforeEnd", item)
+
+            // <p>журналист</p>
+            // <p>историк</p>
+            // <p>патриот</p>
+            // <p>юнармеец</p>
         })
     }
 
     if (arrContest.length > 0) {
-        pagination(arrContest, 5, resArrayContent)
+        pagination(arrContest, 5, resArrayContent, 'arrow')
     }
 })

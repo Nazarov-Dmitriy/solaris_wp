@@ -5,16 +5,17 @@ let currentPage = 1;
 let showCountPage = 3;
 let rangeCountPage = [];
 let content = [];
+let showPagination = 'all'
 
-function pagination(arrData, perPagCount = 3, resArrayContent) {
-    console.log("вызвали");
+function pagination(arrData, perPagCount = 3, resArrayContent, showPaginationButtons = 'all') {
     perPage = perPagCount;
     arr = arrData;
+    showPagination = showPaginationButtons
 
     getTotalPage();
     getRangeCountPage();
     getPagainationItem(resArrayContent);
-
+   
     document.querySelector('.pagination-prev').addEventListener('click', () => {
         prevPage();
         getRangeCountPage();
@@ -27,16 +28,18 @@ function pagination(arrData, perPagCount = 3, resArrayContent) {
         getPagainationItem(resArrayContent);
     })
 
-    document.querySelector('.pagination-dots--left').addEventListener('click', (e) => {
-        if (e.target.classList.contains('pagination-dots--left-show')) {
-            getStartPage(resArrayContent);
-        }
-    })
-    document.querySelector('.pagination-dots--right').addEventListener('click', (e) => {
-        if (e.target.classList.contains('pagination-dots--right-show')) {
-            getEndtPage(resArrayContent);
-        }
-    })
+    if (showPaginationButtons == 'all') {
+        document.querySelector('.pagination-dots--left').addEventListener('click', (e) => {
+            if (e.target.classList.contains('pagination-dots--left-show')) {
+                getStartPage(resArrayContent);
+            }
+        })
+        document.querySelector('.pagination-dots--right').addEventListener('click', (e) => {
+            if (e.target.classList.contains('pagination-dots--right-show')) {
+                getEndtPage(resArrayContent);
+            }
+        })
+    }
 }
 
 function getTotalPage() {
@@ -129,39 +132,42 @@ function showDots() {
 
 
 function getPagainationItem(resArrayContent) {
-    let nodeLi = '';
-    let elementAfterInsert = document.querySelector('.pagination-dots--left');
-    let itemsElemetns = document.querySelectorAll('.pagination-item');
-    showDots();
-    if (itemsElemetns.length == 0) {
-        for (let i = rangeCountPage[0]; i <= rangeCountPage[1]; i++) {
-            if (i == currentPage) {
-                nodeLi += `<li class="pagination-item pagination-item--active h3" data-page=${i}>${i}</li>`
-            }
-            else {
-                nodeLi += `<li class="pagination-item h3" data-page=${i}>${i}</li>`
-            }
-        }
-        elementAfterInsert.insertAdjacentHTML("afterEnd", nodeLi);
+    if (showPagination == 'all') {
 
-        document.querySelectorAll('.pagination-item').forEach(item => {
-            item.addEventListener('click', () => {
-                setCurrentPage(item.getAttribute('data-page'), resArrayContent);
+        let nodeLi = '';
+        let elementAfterInsert = document.querySelector('.pagination-dots--left');
+        let itemsElemetns = document.querySelectorAll('.pagination-item');
+        showDots();
+        if (itemsElemetns.length == 0) {
+            for (let i = rangeCountPage[0]; i <= rangeCountPage[1]; i++) {
+                if (i == currentPage) {
+                    nodeLi += `<li class="pagination-item pagination-item--active h3" data-page=${i}>${i}</li>`
+                }
+                else {
+                    nodeLi += `<li class="pagination-item h3" data-page=${i}>${i}</li>`
+                }
+            }
+            elementAfterInsert.insertAdjacentHTML("afterEnd", nodeLi);
+
+            document.querySelectorAll('.pagination-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    setCurrentPage(item.getAttribute('data-page'), resArrayContent);
+                })
+            });
+
+        } else {
+            itemsElemetns.forEach((item, ind) => {
+                let pageCoutn = rangeCountPage[0] + ind;
+                item.textContent = pageCoutn;
+                item.setAttribute('data-page', pageCoutn);
+
+                if (pageCoutn == currentPage) {
+                    item.classList.add('pagination-item--active');
+                } else {
+                    item.classList.remove('pagination-item--active');
+                }
             })
-        });
-
-    } else {
-        itemsElemetns.forEach((item, ind) => {
-            let pageCoutn = rangeCountPage[0] + ind;
-            item.textContent = pageCoutn;
-            item.setAttribute('data-page', pageCoutn);
-
-            if (pageCoutn == currentPage) {
-                item.classList.add('pagination-item--active');
-            } else {
-                item.classList.remove('pagination-item--active');
-            }
-        })
+        }
     }
     getContentPage(currentPage);
     resArrayContent(content);

@@ -3,16 +3,15 @@
       <h2 class="more-competitions__title">
         Еще больше конкурсов
         <span>от Солярика </span>
-        <span>в телеграмм - канале</span>
+        <span>в телеграм - канале</span>
       </h2>
 
       <img src="<?php echo get_template_directory_uri() ?>/assets/image/more-competitions/hare.png" alt="" class="more-competitions__img" />
       <div class="more-competitions__text-wrap">
         <p class="more-competitions__text">
-          Хочешь всегда быть
-          <span>в курсе событий?</span>
-          Подпишись на наш чат-бот в
-          <span>телеграмм!</span>
+        Еще больше конкурсов
+        <span>от Солярика </span>
+        <span>в телеграм - канале</span>
         </p>
         <img class="more-competitions__img-bottom" src="<?php echo get_template_directory_uri() ?>/assets/image/more-competitions/text-wrap-bottom.png" alt="" />
       </div>
