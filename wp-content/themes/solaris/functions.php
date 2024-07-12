@@ -100,3 +100,37 @@ function console_log($data)
         echo ("<script>console.log('php_string: " . $data . "');</script>");
     }
 }
+
+// Функция перенаправления после неудачной авторизации
+function custom_login_fail( $username ) {
+    $referrer = $_SERVER['HTTP_REFERER'];  // где произошла попытка входа
+    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+       wp_redirect( $referrer . 'login_error=true' );  // добавляем параметр ошибки
+       exit;
+    }
+ }
+ add_action( 'wp_login_failed', 'custom_login_fail' );
+ 
+ // Функция для изменения сообщений об ошибках и добавления проверки пустых полей
+ function custom_authenticate_error_message( $user, $password ) {
+     // Проверяем, пусты ли поля логина и пароля
+     if ( empty( $user ) || empty( $password ) ) {
+         // Возвращаем ошибку, если поля пусты
+         return new WP_Error( 'empty_fields', 'Логин и пароль не могут быть пустыми.' );
+     }
+     return $user;
+ }
+ add_filter( 'authenticate', 'custom_authenticate_error_message', 99999, 2 );
+ 
+ // JavaScript для отображения сообщения об ошибке
+ function custom_login_alert() {
+     if ( isset( $_GET['login_error'] ) ) {
+         ?>
+         <script type="text/javascript">
+         alert('Ошибка авторизации: Пожалуйста, проверьте введенные данные.');
+         </script>
+         <?php
+     }
+ }
+ add_action( 'wp_footer', 'custom_login_alert' );
+ 
