@@ -16,7 +16,7 @@
             <div class="solaris-faq-content">
               <p class="solaris-faq__description p2">
                 Доступ к личному кабинету выдает классный руководитель учащегося
-                с лицее «Солярис».1
+                с лицее «Солярис».
               </p>
             </div>
           </div>
@@ -33,7 +33,7 @@
             <div class="solaris-faq-content">
               <p class="solaris-faq__description p2">
                 Доступ к личному кабинету выдает классный руководитель учащегося
-                с лицее «Солярис».2
+                с лицее «Солярис».
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@
             <div class="solaris-faq-content">
               <p class="solaris-faq__description p2">
                 Доступ к личному кабинету выдает классный руководитель учащегося
-                с лицее «Солярис».3
+                с лицее «Солярис».
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@
             <div class="solaris-faq-content">
               <p class="solaris-faq__description p2">
                 Доступ к личному кабинету выдает классный руководитель учащегося
-                с лицее «Солярис».4
+                с лицее «Солярис».
               </p>
             </div>
           </div>
