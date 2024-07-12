@@ -1,41 +1,3 @@
-<?php
-$arr = [
-  [
-    "title" => "Название направления",
-  ],
-  [
-    "title" => "Название направления 1",
-  ],
-  [
-    "title" => "Название направления 2",
-  ],
-  [
-    "title" => "Название направления 3",
-  ],
-  [
-    "title" => "Название направления 4",
-  ],
-  [
-    "title" => "Название направления 5",
-  ],
-  [
-    "title" => "Название направления 6",
-  ],
-  [
-    "title" => "Название направления 7",
-  ],
-  [
-    "title" => "Название направления 8",
-  ],
-  [
-    "title" => "Название направления 9",
-  ],
-
-
-];
-wp_localize_script('solaris_main_trend', 'arrTrend', $arr);
-?>
-
 <section class="trend-container" id="trend">
   <div class="trend">
     <div class="trend__content">
@@ -51,6 +13,22 @@ wp_localize_script('solaris_main_trend', 'arrTrend', $arr);
       </p>
       <div class="trend__list">
         <h2 class="trend-subtitle ">Направления</h2>
+        <?php
+        $taxonomy = 'category'; // Используйте 'post_tag' для рубрики "tags"
+        $parent_term_id = 4; // Установите ID родительской рубрики
+
+        $child_terms = get_terms( array(
+            'taxonomy' => $taxonomy,
+            'parent'   => $parent_term_id,
+            'hide_empty' => false,
+        ) );
+
+        if ( !empty($child_terms) && !is_wp_error($child_terms) ) {
+            foreach ( $child_terms as $child_term ) {
+                echo '<div class="trend-item"><img src="/wp-content/themes/solaris/assets/image/trend/trendName.png" alt="img-trend" class="trend-img"><a href="' . esc_url( get_term_link( $child_term ) ) . '" class="trend-item-btn h3">' . esc_html( $child_term->name ) . '</a></div>';
+            }
+        }
+      ?>
       </div>
     </div>
     <div class="trend-container-img">
