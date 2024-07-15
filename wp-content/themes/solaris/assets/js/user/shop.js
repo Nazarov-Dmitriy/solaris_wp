@@ -9,6 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 
+    let description = document.querySelector('.balance-description')
+    let tooltip = document.querySelector('.balance__tolltip')
+    let tooltipClose = document.querySelector('.balance__tolltip-close')
+
+    description.addEventListener('click', () => {
+        tooltip.classList.add('active')
+        description.classList.add('active')
+    })
+
+    tooltipClose.addEventListener('click', (e) => {
+        e.stopPropagation()
+        tooltip.classList.remove('active')
+        description.classList.remove('active')
+    })
+
+
+
     let arrContent = arr;
 
     let list = document.querySelector('.shop-list');
@@ -24,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         arrPagination.forEach(elem => {
             let item =
                 `
-                <div class="shop-item ${elem.popular ? 'shop-item__popular' : ''}">
+                <div id=${elem.id}  class="shop-item ${elem.popular ? 'shop-item__popular' : ''}" >
                 <img class="shop-img" src="/wp-content/themes/solaris/assets/image/cabinet/image.png" alt="">
                 <div class="shop-contnent">
                     <p class="shop-subtitle p1">${elem.title}</p>
@@ -43,5 +60,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (arrContent.length > 0) {
         pagination(arrContent, 6, resArrayContent)
+    }
+
+    let idCard
+
+    let card = document.querySelector('.shop-item')
+    card = this.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id;
+        let target = e.target;
+        if (target.closest('.shop-item')) {
+            id = getId(target);
+        }
+        console.log(id);
+        console.log(window.location);
+        window.location.href = 'http://' + window.location.hostname + `/cabinet-shop-card?id=${id}`
+      })
+
+    function getId(el) {
+        let id;
+        if (el.classList.contains('shop-item')) {
+                     return id = el.getAttribute('id')
+        } else if( !id) {
+          id =  getId(el.parentNode)
+        }
+        return id
     }
 });

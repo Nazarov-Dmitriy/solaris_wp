@@ -1,0 +1,326 @@
+.shop-card {
+    width: 100%;
+    padding: 32px 60px;
+    max-width: 1560px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    border: 2px solid var(--roseBege);
+    width: 100%;
+}
+
+.card-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 381px 382px 1fr;
+    grid-template-areas: 'img text price';
+    justify-content: space-between;
+    align-items: start;
+    gap: 39px;
+}
+
+.card-img {
+    grid-area: img;
+    max-height: 207px;
+    object-fit: cover;
+}
+
+.card-header-text {
+    grid-area: text;
+    color: var(--white);
+}
+
+.card-price-wraper {
+    justify-self: end;
+    grid-area: price;
+    display: flex;
+    align-items: center;
+    color: var(--roseBege);
+    gap: 8px;
+}
+
+.card-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: var(--white);
+    width: 100%;
+}
+
+.card-text-header {
+    margin-bottom: 24px;
+}
+
+.card-header-text,
+.card-price {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 700
+}
+
+
+.card-text-word {
+    text-align: justify;
+}
+
+.card-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.cancel-btn {
+    border: 2px solid var(--roseBege);
+    width: 295px;
+    height: 56px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--roseBege);
+    cursor: pointer;
+
+    &:hover{
+        border: 2px solid var(--roseBege);
+        background-color:var(--roseBege);
+        color: var(--white);
+    }
+
+    &:active{
+        border: 2px solid var(--dark);
+        color: var(--dark);
+        background: var(--roseBege);
+    }
+}
+
+.exchange-btn {
+    border: 2px solid white;
+    width: 295px;
+    height: 56px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(222, 71, 0, 1);
+    color: white;
+    cursor: pointer;
+
+    &:hover{
+        border: 2px solid var(--roseBege);
+        color: white;
+        background: var(--roseBege);
+    }
+
+    &:active{
+        border: 2px solid var(--dark);
+        color: var(--dark);
+        background: var(--roseBege);
+    }
+}
+
+.quantity-block {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.quantity {
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.increase,
+.decrease {
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.quantity-text {
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+@media (max-width: 1200px) {
+    .card-header {
+        grid-template-columns: 381px 1fr;
+        grid-template-areas:
+            'img text'
+            'img price';
+        gap: 16px 39px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .card-header {
+        grid-template-columns: 313px 1fr;
+        grid-template-rows: 72px auto;
+    }
+
+    .card-img {
+        height: 170px;
+    }
+
+    .cancel-btn {
+        width: 111px;
+    }
+
+    .card-header-text,
+    .card-price {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .card-price-wraper {
+        float: right;
+    }
+
+    .exchange-btn{
+        width: 111px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-card {
+        padding: 20px 40px;
+    }
+
+    .card {
+        padding: 24px 16px;
+    }
+
+    .card-header {
+        grid-template-columns: 313px 1fr;
+        grid-template-rows: 36px auto;
+        grid-template-areas:
+            'text text'
+            'img price';
+        gap: 24px 16px;
+    }
+
+    .card-header-text {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+    }
+
+    .card-text {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .card-price {
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    .card-img {
+        height: 170px;
+    }
+
+    .card-icon {
+        width: 30px;
+        height: 32px;
+    }
+
+    .exchange-btn {
+        width: 111px;
+    }
+
+    .quantity-text{
+        display: none;
+    }
+
+    .quantity {
+        width: 32px;
+        height: 32px;
+    }
+
+    .decrease {
+        height: 32px;
+    }
+
+    .increase {
+        height: 32px;
+    }
+
+    .card-buttons{
+        align-items:center;
+    }
+}
+
+@media (max-width: 576px) {
+    .shop-card {
+        padding: 16px;
+    }
+
+    .card-text {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .card-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'text'
+            'img'
+            'price';
+        gap: 24px;
+    }
+
+    .card-img {
+        width: 100%;
+        aspect-ratio: 1.8 / 1;
+        height: auto;
+    }
+
+    .card-buttons{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .cancel-btn{
+        order: 1;
+        width: 100%;
+    }
+
+    .exchange-btn{
+        width: 185px;
+        flex-grow: 1;
+    }
+
+    .quantity-block{
+        justify-content: space-between;        
+        flex-grow: 10;
+        max-width: 109px;
+        width: 109px;
+        margin-right: 16px;
+        margin: 0 auto;
+    }
+}

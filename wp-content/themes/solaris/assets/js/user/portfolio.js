@@ -13,11 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const closeDropdownFromOutside = () => {
-        dropdown.forEach(el => {
-            if (el.classList.contains('opened')) {
-                el.classList.remove('opened');
-            }
-        })
+        if(dropdown.classList.contains('opened')){
+            dropdown.classList.remove('opened');
+        }
     };
 
     dropdown.addEventListener('click', (evetn) => toggleDropdown(evetn, dropdown));
@@ -26,15 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         opt.addEventListener('click', (evt) => selectOption(evt, dropdown.childNodes[1]))
     })
 
-
-    // dropdown.forEach(el => {
-    //     console.log(el);
-    //     el.addEventListener('click', (evetn) => toggleDropdown(evetn, el));
-    //     el.querySelectorAll('.dropdown-option').forEach(opt => {
-    //         opt.addEventListener('click', (evt) => selectOption(evt, el.childNodes[0]))
-    //     })
-    // })
-
+ 
     body.addEventListener('click', closeDropdownFromOutside);
     
     let arrContest = data;
@@ -72,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 </tr>
                 `
             list.insertAdjacentHTML("beforeEnd", item)
-
-            // <p>журналист</p>
-            // <p>историк</p>
-            // <p>патриот</p>
-            // <p>юнармеец</p>
         })
     }
 

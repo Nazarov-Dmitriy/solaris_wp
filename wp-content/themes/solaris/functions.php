@@ -33,6 +33,9 @@ function solaris_theme_scripts()
     wp_register_script('solaris_main_сontest_today', get_template_directory_uri() . '/assets/js/main/сontest-today.js', [], '1.0', [
         'in_footer' => true,
     ]);
+    wp_register_script('solaris_user_cabinet_shop_card', get_template_directory_uri() . '/assets/js/user/shop-card.js', [], '1.0', [
+        'in_footer' => true,
+    ]);
 }
 
 add_action('wp_enqueue_scripts', 'solaris_theme_scripts');
@@ -90,6 +93,11 @@ function add_solaris_user_cabinet()
 {
     wp_enqueue_script("user-header");
     wp_enqueue_script("user-cabinet");
+}
+function add_script_user_cabinet_shop_card()
+{
+    wp_enqueue_script("user-header");
+    wp_enqueue_script("solaris_user_cabinet_shop_card");
 }
 
 function console_log($data)
